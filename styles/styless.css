@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #e100ff;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.cajas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.caja {
+    background-color: white;
+    border-radius: 5px;
+    width: calc(33.333% - 20px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+}
+
+.caja-center {
+    margin-top: 300px;
+}
+
+.caja-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.caja-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.contenido p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    color: #e100ff;
+    font-size: 0.8rem;
+    padding-top: 20px;
+}
+
+hr {
+    color: #e100ff;
+}
+
+.end {
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas de máximo 920px */
+@media (max-width: 920px) {
+    .caja {
+        width: calc(50% - 15px);
+    }
+    
+    .caja-center {
+        margin-top: 0;
+    }
+    
+    .cajas {
+        justify-content: center;
+    }
+    
+    .caja:last-child {
+        margin-top: 30px;
+        width: 80%;
+    }
+}
+
+/* Para pantallas de máximo 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .caja:last-child {
+        width: 100%;
+    }
+}
+
+/* Para pantallas de máximo 480px */
+@media (max-width: 480px) {
+    .caja {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .caja-center {
+        margin-top: 0;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contenido h2 {
+        font-size: 1.2rem;
+    }
+}
