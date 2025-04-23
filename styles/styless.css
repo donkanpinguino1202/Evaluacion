@@ -33,10 +33,10 @@ h1 {
 .cajas {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
     justify-content: space-between;
-    margin-bottom: 40px;
+    gap: 30px;
 }
+
 
 .caja {
     background-color: white;
@@ -53,8 +53,9 @@ h1 {
 }
 
 .caja-center {
-    margin-top: 300px;
+    transform: translateY(60px);
 }
+
 
 .caja-image {
     width: 100%;
@@ -89,7 +90,7 @@ h1 {
 }
 
 footer {
-    margin-top: auto;
+    margin-top: 40px;
     text-align: center;
     color: #e100ff;
     font-size: 0.8rem;
@@ -97,6 +98,7 @@ footer {
 }
 
 hr {
+    margin-top: 40px;
     color: #e100ff;
 }
 
@@ -110,23 +112,25 @@ hr {
 
 /* Para pantallas de máximo 920px */
 @media (max-width: 920px) {
-    .caja {
-        width: calc(50% - 15px);
-    }
-    
-    .caja-center {
-        margin-top: 0;
-    }
-    
-    .cajas {
-        justify-content: center;
-    }
-    
-    .caja:last-child {
-        margin-top: 30px;
-        width: 80%;
-    }
+.caja {
+    width: calc(50% - 15px);
 }
+
+.caja-center {
+    margin-top: 0;
+}
+
+.cajas {
+    justify-content: center;
+}
+
+.caja:last-child {
+    margin-top: 30px;
+    width: 80%;
+}
+}
+
+
 
 /* Para pantallas de máximo 768px */
 @media (max-width: 768px) {
